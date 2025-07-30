@@ -66,6 +66,15 @@ class Password(BaseModel):
 class OtpType(BaseModel):
     otptype: str
 
+class data(BaseModel):
+    sender: str
+    content: str
+    date: str
+    starred: False
+    subject: str
+    
+user_name=""
+
 #sign_in content
 
 @app.get("/", response_class=HTMLResponse)
@@ -195,8 +204,19 @@ async def sending_mails(data):
     #data is given in the form of a list
     #add in backend data for sender as well as receiver
     # sending mails code here
-    
-    return
+    bd_data[user_name]["mails"]["inbox"][mail.sender]={
+        "subject":data.subject,
+        "date": data.date,
+        "content":data.content,
+        "starred": data.starred
+    }
+    bd[mail.sender]["mails"]["sent"][user_name]={
+        "subject":data.subject,
+        "date": data.date,
+        "content":data.content,
+        "starred": data.starred
+    }
+    return JSONResponce({"satus":"updated Succesfully","status_code":"400"})
 
 
 @app.get("/sent",response_class=HTMLResponse)
