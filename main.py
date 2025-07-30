@@ -23,7 +23,8 @@ bd_data = {
             "Ans": "Hare krishna",
             "phoneno": 6281198159
         },
-        "inbox": {
+        "mails":{
+            "inbox": {
             "XYZ@gmail.com": "mail content",
             "ABC@gmail.com": "mail content",
             "ijk@gmail.in": "mail content"
@@ -33,6 +34,7 @@ bd_data = {
             "shiva@gmail.com": "mail content",
             "rohan@gmail.com": "mail content"
         }
+        }
     },
     "24BD1A0555": {
         "Password": "nrkr2504",
@@ -40,7 +42,8 @@ bd_data = {
             "Ans": "Rohan kumar reddy",
             "phoneno": 9381418665
         },
-        "inbox": {
+        "mails":{
+            "inbox": {
             "XYZ@gmail.com": "mail content",
             "ABC@gmail.com": "mail content",
             "ijk@gmail.in": "mail content"
@@ -48,7 +51,8 @@ bd_data = {
         "sent": {
             "sam@gmail.com": "mail content",
             "shiva@gmail.com": "mail content",
-            "ram@gmail.com": "mail content"
+            "rohan@gmail.com": "mail content"
+        }
         }
     }
 }
@@ -200,7 +204,7 @@ async def inbox(username: str):
         return HTMLResponse(content=f.read,status_code=404)
 
 @app.post("/compose")
-async def sending_mails(data):
+async def sending_mails(mail: data):
     #data is given in the form of a list
     #add in backend data for sender as well as receiver
     # sending mails code here
@@ -210,13 +214,13 @@ async def sending_mails(data):
         "content":data.content,
         "starred": data.starred
     }
-    bd[mail.sender]["mails"]["sent"][user_name]={
+    bd_data[mail.sender]["mails"]["sent"][user_name]={
         "subject":data.subject,
         "date": data.date,
         "content":data.content,
         "starred": data.starred
     }
-    return JSONResponce({"satus":"updated Succesfully","status_code":"400"})
+    return JSONResponse({"satus":"updated Succesfully","status_code":"400"})
 
 
 @app.get("/sent",response_class=HTMLResponse)
