@@ -234,7 +234,15 @@ async def verify_otp_post(data: Otp):
 
 
 
+@app.get("/updatepassword",response_class=HTMLResponse)
+async def uppass():
+    with open("updatepassword.html") as f:
+        return HTMLResponse(content=f.read(),status_code=200)
 
+
+@app.post("/updatepassword")
+async def uppass(data: update):
+    
 
 
 
