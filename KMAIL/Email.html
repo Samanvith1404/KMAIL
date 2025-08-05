@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kmail-Email</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .header {
+                padding-top: 10px;
+                background-color: rgb(83, 186, 255);
+                text-align: center;
+                height: 80px;
+            }
+            .box{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: white;
+                color: rgb(10, 10, 10);
+                border-radius: 5px;
+            
+                margin: 80px;
+                
+            }
+            .box1{
+                height: 400px;
+                max-width: 450px;
+                border-radius: 30px;
+                background-color: aliceblue;
+                text-align: left;
+                padding: 30px;
+                padding-top: 50px;
+                box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+                font-size:25px;
+                margin-top: 45px;
+            }
+            .header img{
+                padding-top: 1px;
+            }
+            h1{
+                font-size: 35px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+            }
+            label{
+                font-size: 25px;
+                padding: 10px;
+                height: 40px;
+                margin-bottom: 100px;
+            }
+            .but{
+                width: 400px;
+                height: 30px;
+                padding: 10px;
+                margin-top: 8px;
+                width: 94%;
+            }
+            .nextstep{
+                width: 100%;
+                background-color: rgb(59, 59, 152);
+                border-radius: 10px;
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                height: 35px;
+                font-size: 20px;
+                transition: opacity 0.5s;
+                border: 0px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .otp{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            input{
+                padding-left: 5px;
+                font-size: 20px;
+            }
+            .nextstep:hover {
+                opacity: 0.8;
+            }
+            .nextstep:active {
+                box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            }
+            p {
+                padding-bottom: 15px; 
+                color :gray;
+                font-size: 20px;
+            }
+            .back {
+                display: block;
+                text-align: center;
+                margin-top: 15px;   
+            }
+        </style>
+        <link rel="icon" href="Screenshot 2025-07-14 130334.png" type="image/png">
+    </head>
+    <body>
+        <div class="header">    
+            <img src="Screenshot 2025-07-14 133000.png" alt="kmail" height="70" width="150" padding-top="">
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h1 style="margin-bottom: 20px;">Forgot Password</h1>
+                <p style = "text-align : center; margin-top: 18px;">
+                    Enter your registered Email Address to receive a One-Time Password via WhatsApp.
+                </p>
+                <label for="email"><b>E-mail</b></label><br>
+                <input type="email" style="margin-bottom: -12px; margin-top: 15px;" id="email" class="but" placeholder="Eg : abc@gmail.com" title="Enter Email Address" required><br><br>
+                <div class="otp"><a class="nextstep" href="OTP.html">Send OTP</a></div>
+                <a href="user.html" class="back" style="margin-top: 18px;">Back to login</a>
+            </div>     
+        </div>
+    </body>
+</html>

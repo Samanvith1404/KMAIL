@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kmail-Username</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header {
+            padding-top: 10px;
+            background-color: rgb(83, 186, 255);
+            text-align: center;
+            height: 80px;
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: white;
+            color: rgb(10, 10, 10);
+            border-radius: 5px;
+            margin: 80px;
+        }
+        .box1{
+            height: 420px;
+            max-width: 450px;
+            border-radius: 30px;
+            background-color: aliceblue;
+            text-align: left;
+            padding: 30px;
+            padding-top: 50px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+            font-size:25px;
+        }
+        .header img{
+            padding-top: 1px;
+        }
+        h1{
+            font-size: 36px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        label{
+            font-size: 25px;
+            padding: 10px;
+            height: 40px;
+        }
+        .but{
+            width: 400px;
+            height: 30px;
+            padding: 10px;
+            margin-top: 8px;
+        }
+        .login{
+            width: 200px;
+            background-color: rgb(59, 59, 152);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 35px;
+            font-size: 20px;
+            transition: opacity 0.5s;
+            border: 0px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 7px;
+        }
+        .button1{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        input{
+            padding-left: 5px;
+            font-size: 20px;
+        }
+        .forgot{
+            text-align: right;
+            margin-left : 250px;
+            margin-bottom: 30px;
+            transition: color 0.5s , box-shadow 0.5s;
+        }
+        .forgot:hover {
+            color: rgb(228, 95, 95);
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        button:active {
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+            </style>
+    <link rel="icon" href="Screenshot 2025-07-14 130334.png" type="image/png">
+</head>
+<body>
+    <div class="header">    
+        <img src="Screenshot 2025-07-14 133000.png" alt="kmail" height="70" width="150" padding-top="">
+    </div>
+    <div class="box">
+        <div class="box1">
+            <h1 style="margin-bottom: 15px;">Login Here</h1>
+            <label for="username">Username</label><br>
+            <input type="text" id="username" class="but"  required placeholder="Eg : 24BD1A0XXX"><br><br>
+            <label for="password">Password</label><br>
+            <input type="text" id="password" class="but" placeholder="Password" style="margin-bottom: -20px;" required><br><br>
+            <a href="forgotpass.html" class="forgot">Forgot password</a>
+            <div class="button1"><a class="login" href = "Home.html">Login</a></div>
+        </div>        
+    </div>
+</body>
+</html>
